@@ -21,6 +21,7 @@ def gcd(a, b):
 a = 6424608522503111
 b = 3242940221833111 
 
+# Not really needed
 d = gcd(a, b)
 
 A = [[a, 1, 0],
@@ -30,7 +31,7 @@ sys.stdout.write('\\begin{multline*}')
 print_latex_matrix(A)
 
 i = 1
-while A[0][0] != d and A[1][0] != d:
+while A[0][0] != 0 and A[1][0] != 0:
     if A[0][0] > A[1][0]:
         factor = A[0][0] // A[1][0]
         A[0] = [(A[0][j] - factor*A[1][j]) for j in range(len(A[0]))]
